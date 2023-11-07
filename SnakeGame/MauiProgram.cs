@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Platform;
+using SnakeGame.Components;
+using System.Drawing;
 
 namespace SnakeGame;
 
@@ -19,6 +22,6 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		return builder.Build();
+        return builder.Build();
 	}
 }

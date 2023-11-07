@@ -43,9 +43,9 @@ namespace SnakeGame.Models
         {
         }
 
-        public bool Tick()
+        public int Tick()
         {
-            return true;
+            return 0;
         }
     }
 }
