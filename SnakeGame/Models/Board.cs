@@ -14,13 +14,17 @@ namespace SnakeGame.Models
 {
     public class Board : IBoard
     {
-        private bool playing;
-
         public bool Playing
         {
             get => playing;
             set => playing = value;
         }
+
+        private readonly int BoardSizeX;
+        private readonly int BoardSizeY;
+        private bool playing;
+        private Snake snake;
+        private List<Food> food;
 
         public Board(int x_size, int y_size)
         {
@@ -41,6 +45,9 @@ namespace SnakeGame.Models
 
         public void TestInitBoard(Snake snake, List<Food> food)
         {
+            this.playing = true;
+            this.snake = snake;
+            this.food = food;
         }
 
         public int Tick()
